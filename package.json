@@ -20,12 +20,12 @@
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"better-sqlite3": "^12.4.1",
 		"prisma": "^5.22.0",
+		"dotenv": "^17.4.2",
 		"svelte": "^5.55.2",
 		"vite": "^8.0.7"
 	},
 	"devDependencies": {
 		"@types/node": "^24.5.2",
-		"dotenv": "^17.4.2",
 		"svelte-check": "^4.4.6",
 		"typescript": "^6.0.2"
 	},
