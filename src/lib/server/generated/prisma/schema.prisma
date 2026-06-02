@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/lib/server/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(uuid())
+  username  String     @unique
+  salt      String
+  hash      String
+  createdAt DateTime   @default(now())
+  sessions  Session[]
+  gameState GameState?
+}
+
+model Session {
+  id        String   @id @default(uuid())
+  tokenHash String   @unique
+  userId    String
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model GameState {
+  id            String   @id @default(uuid())
+  userId        String   @unique
+  donuts        Int      @default(0)
+  perClick      Int      @default(1)
+  autoPerSecond Int      @default(0)
+  clickLevel    Int      @default(0)
+  autoLevel     Int      @default(0)
+  rebirths      Int      @default(0)
+  superRebirths Int      @default(0)
+  totalClicks   Int      @default(0)
+  totalEarned   Int      @default(0)
+  lastTickAt    DateTime @default(now())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
