@@ -1,6 +1,6 @@
 import path from 'node:path';
 import { PrismaBetterSqlite3 } from '@prisma/adapter-better-sqlite3';
-import { PrismaClient } from '$lib/server/generated/prisma/client';
+import { PrismaClient } from './generated/prisma/client.js';
 
 const globalForPrisma = globalThis as typeof globalThis & {
 	prisma?: PrismaClient;
