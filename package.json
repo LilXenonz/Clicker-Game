@@ -12,23 +12,24 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"dependencies": {
-    "@prisma/adapter-better-sqlite3": "^7.7.0",
-    "@prisma/client": "^5.22.0",
-    "@sveltejs/adapter-auto": "^7.0.1",
-    "@sveltejs/kit": "^2.57.0",
-    "@sveltejs/vite-plugin-svelte": "^7.0.0",
-    "better-sqlite3": "^12.4.1",
-    "prisma": "^5.22.0",
-    "svelte": "^5.55.2",
-    "vite": "^8.0.7"
-},
-"devDependencies": {
-    "@types/node": "^24.5.2",
-    "dotenv": "^17.2.3",
-    "svelte-check": "^4.4.6",
-    "typescript": "^6.0.2"
-},
+		"@prisma/adapter-better-sqlite3": "^7.7.0",
+		"@prisma/client": "^5.22.0",
+		"@sveltejs/adapter-auto": "^7.0.1",
+		"@sveltejs/adapter-node": "^5.5.4",
+		"@sveltejs/kit": "^2.57.0",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"better-sqlite3": "^12.4.1",
+		"prisma": "^5.22.0",
+		"svelte": "^5.55.2",
+		"vite": "^8.0.7"
+	},
+	"devDependencies": {
+		"@types/node": "^24.5.2",
+		"dotenv": "^17.2.3",
+		"svelte-check": "^4.4.6",
+		"typescript": "^6.0.2"
+	},
 	"engines": {
-  		"node": ">=22.0.0"
+		"node": ">=22.0.0"
 	}
 }
